@@ -3,12 +3,12 @@ pipeline {
   stages {
     stage('initialize') {
       steps {
-        bat 'java -version dir'
+        bat 'mvn install'
       }
     }
   }
   environment {
-    maven = 'Maven 3.3.9'
+    maven = 'Maven 3.5.4'
     jdk = 'jdk8'
   }
 }
